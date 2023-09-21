@@ -1,0 +1,152 @@
+2023-09-19 10:55:15.168  INFO 36084 --- [main] m.a.ActivitiProcessDeployApplication     : Starting ActivitiProcessDeployApplication using Java 1.8.0_332 on mao with PID 36084 (D:\程序\2023Q3\activiti-process-deploy\target\classes started by mao in D:\程序\2023Q3\activiti-process-deploy)
+2023-09-19 10:55:15.169 DEBUG 36084 --- [main] m.a.ActivitiProcessDeployApplication     : Running with Spring Boot v2.7.1, Spring v5.3.21
+2023-09-19 10:55:15.169  INFO 36084 --- [main] m.a.ActivitiProcessDeployApplication     : No active profile set, falling back to 1 default profile: "default"
+2023-09-19 10:55:15.442  INFO 36084 --- [main] m.a.ActivitiProcessDeployApplication     : Started ActivitiProcessDeployApplication in 0.473 seconds (JVM running for 1.09)
+2023-09-19 10:55:15.445  INFO 36084 --- [main] org.activiti.engine.ProcessEngines       : Initializing process engine using configuration 'file:/D:/%e7%a8%8b%e5%ba%8f/2023Q3/activiti-process-deploy/target/classes/activiti.cfg.xml'
+2023-09-19 10:55:15.445  INFO 36084 --- [main] org.activiti.engine.ProcessEngines       : initializing process engine for resource file:/D:/%e7%a8%8b%e5%ba%8f/2023Q3/activiti-process-deploy/target/classes/activiti.cfg.xml
+2023-09-19 10:55:16.039  INFO 36084 --- [main] aultActiviti5CompatibilityHandlerFactory : Activiti 5 compatibility handler implementation not found or error during instantiation : org.activiti.compatibility.DefaultActiviti5CompatibilityHandler. Activiti 5 backwards compatibility disabled.
+2023-09-19 10:55:16.096  INFO 36084 --- [main] o.a.engine.impl.ProcessEngineImpl        : ProcessEngine default created
+2023-09-19 10:55:16.098  INFO 36084 --- [main] org.activiti.engine.ProcessEngines       : initialised process engine default
+2023-09-19 10:55:16.149 ERROR 36084 --- [main] o.a.e.impl.interceptor.CommandContext    : Error while closing command context
+
+org.activiti.engine.ActivitiException: Errors while parsing:
+[Validation set: 'activiti-executable-process' | Problem: 'activiti-seq-flow-invalid-target'] : Invalid target for sequenceflow - [Extra info : processDefinitionId = test | processDefinitionName = test |  | id = sid-64d596df-da04-40ba-856b-9d42468a03ff | ] ( line: 7, column: 136)
+
+	at org.activiti.engine.impl.bpmn.parser.BpmnParse.execute(BpmnParse.java:177) ~[activiti-engine-7.0.0.Beta1.jar:na]
+	at org.activiti.engine.impl.bpmn.deployer.ParsedDeploymentBuilder.createBpmnParseFromResource(ParsedDeploymentBuilder.java:96) ~[activiti-engine-7.0.0.Beta1.jar:na]
+	at org.activiti.engine.impl.bpmn.deployer.ParsedDeploymentBuilder.build(ParsedDeploymentBuilder.java:55) ~[activiti-engine-7.0.0.Beta1.jar:na]
+	at org.activiti.engine.impl.bpmn.deployer.BpmnDeployer.deploy(BpmnDeployer.java:66) ~[activiti-engine-7.0.0.Beta1.jar:na]
+	at org.activiti.engine.impl.persistence.deploy.DeploymentManager.deploy(DeploymentManager.java:60) ~[activiti-engine-7.0.0.Beta1.jar:na]
+	at org.activiti.engine.impl.cmd.DeployCmd.executeDeploy(DeployCmd.java:110) ~[activiti-engine-7.0.0.Beta1.jar:na]
+	at org.activiti.engine.impl.cmd.DeployCmd.execute(DeployCmd.java:60) ~[activiti-engine-7.0.0.Beta1.jar:na]
+	at org.activiti.engine.impl.cmd.DeployCmd.execute(DeployCmd.java:40) ~[activiti-engine-7.0.0.Beta1.jar:na]
+	at org.activiti.engine.impl.interceptor.CommandInvoker$1.run(CommandInvoker.java:37) ~[activiti-engine-7.0.0.Beta1.jar:na]
+	at org.activiti.engine.impl.interceptor.CommandInvoker.executeOperation(CommandInvoker.java:78) ~[activiti-engine-7.0.0.Beta1.jar:na]
+	at org.activiti.engine.impl.interceptor.CommandInvoker.executeOperations(CommandInvoker.java:57) ~[activiti-engine-7.0.0.Beta1.jar:na]
+	at org.activiti.engine.impl.interceptor.CommandInvoker.execute(CommandInvoker.java:42) ~[activiti-engine-7.0.0.Beta1.jar:na]
+	at org.activiti.engine.impl.interceptor.TransactionContextInterceptor.execute(TransactionContextInterceptor.java:48) ~[activiti-engine-7.0.0.Beta1.jar:na]
+	at org.activiti.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:63) ~[activiti-engine-7.0.0.Beta1.jar:na]
+	at org.activiti.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:29) [activiti-engine-7.0.0.Beta1.jar:na]
+	at org.activiti.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:44) [activiti-engine-7.0.0.Beta1.jar:na]
+	at org.activiti.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:39) [activiti-engine-7.0.0.Beta1.jar:na]
+	at org.activiti.engine.impl.RepositoryServiceImpl.deploy(RepositoryServiceImpl.java:83) [activiti-engine-7.0.0.Beta1.jar:na]
+	at org.activiti.engine.impl.repository.DeploymentBuilderImpl.deploy(DeploymentBuilderImpl.java:188) [activiti-engine-7.0.0.Beta1.jar:na]
+	at mao.activiti_process_deploy.ActivitiProcessDeployApplication.main(ActivitiProcessDeployApplication.java:26) [classes/:na]
+
+2023-09-19 11:03:49.230  INFO 13952 --- [main] m.a.ActivitiProcessDeployApplication     : Starting ActivitiProcessDeployApplication using Java 1.8.0_332 on mao with PID 13952 (D:\程序\2023Q3\activiti-process-deploy\target\classes started by mao in D:\程序\2023Q3\activiti-process-deploy)
+2023-09-19 11:03:49.231 DEBUG 13952 --- [main] m.a.ActivitiProcessDeployApplication     : Running with Spring Boot v2.7.1, Spring v5.3.21
+2023-09-19 11:03:49.231  INFO 13952 --- [main] m.a.ActivitiProcessDeployApplication     : No active profile set, falling back to 1 default profile: "default"
+2023-09-19 11:03:49.496  INFO 13952 --- [main] m.a.ActivitiProcessDeployApplication     : Started ActivitiProcessDeployApplication in 0.447 seconds (JVM running for 0.921)
+2023-09-19 11:03:49.498  INFO 13952 --- [main] org.activiti.engine.ProcessEngines       : Initializing process engine using configuration 'file:/D:/%e7%a8%8b%e5%ba%8f/2023Q3/activiti-process-deploy/target/classes/activiti.cfg.xml'
+2023-09-19 11:03:49.499  INFO 13952 --- [main] org.activiti.engine.ProcessEngines       : initializing process engine for resource file:/D:/%e7%a8%8b%e5%ba%8f/2023Q3/activiti-process-deploy/target/classes/activiti.cfg.xml
+2023-09-19 11:03:50.027  INFO 13952 --- [main] aultActiviti5CompatibilityHandlerFactory : Activiti 5 compatibility handler implementation not found or error during instantiation : org.activiti.compatibility.DefaultActiviti5CompatibilityHandler. Activiti 5 backwards compatibility disabled.
+2023-09-19 11:03:50.050  INFO 13952 --- [main] o.a.engine.impl.ProcessEngineImpl        : ProcessEngine default created
+2023-09-19 11:03:50.052  INFO 13952 --- [main] org.activiti.engine.ProcessEngines       : initialised process engine default
+2023-09-19 11:03:50.142  INFO 13952 --- [main] m.a.ActivitiProcessDeployApplication     : 流程id：2501
+2023-09-19 11:03:50.142  INFO 13952 --- [main] m.a.ActivitiProcessDeployApplication     : 流程名称：请假流程定义
+2023-09-19 11:23:09.058  INFO 35412 --- [main] .a.ActivitiProcessDeployApplicationTests : Starting ActivitiProcessDeployApplicationTests using Java 1.8.0_332 on mao with PID 35412 (started by mao in D:\程序\2023Q3\activiti-process-deploy)
+2023-09-19 11:23:09.059 DEBUG 35412 --- [main] .a.ActivitiProcessDeployApplicationTests : Running with Spring Boot v2.7.1, Spring v5.3.21
+2023-09-19 11:23:09.059  INFO 35412 --- [main] .a.ActivitiProcessDeployApplicationTests : No active profile set, falling back to 1 default profile: "default"
+2023-09-19 11:23:09.538  INFO 35412 --- [main] .a.ActivitiProcessDeployApplicationTests : Started ActivitiProcessDeployApplicationTests in 0.664 seconds (JVM running for 1.193)
+2023-09-19 11:23:09.685  INFO 35412 --- [main] org.activiti.engine.ProcessEngines       : Initializing process engine using configuration 'file:/D:/%e7%a8%8b%e5%ba%8f/2023Q3/activiti-process-deploy/target/classes/activiti.cfg.xml'
+2023-09-19 11:23:09.685  INFO 35412 --- [main] org.activiti.engine.ProcessEngines       : initializing process engine for resource file:/D:/%e7%a8%8b%e5%ba%8f/2023Q3/activiti-process-deploy/target/classes/activiti.cfg.xml
+2023-09-19 11:23:11.163  INFO 35412 --- [main] aultActiviti5CompatibilityHandlerFactory : Activiti 5 compatibility handler implementation not found or error during instantiation : org.activiti.compatibility.DefaultActiviti5CompatibilityHandler. Activiti 5 backwards compatibility disabled.
+2023-09-19 11:23:11.207  INFO 35412 --- [main] o.a.engine.impl.ProcessEngineImpl        : ProcessEngine default created
+2023-09-19 11:23:11.211  INFO 35412 --- [main] org.activiti.engine.ProcessEngines       : initialised process engine default
+2023-09-19 11:23:11.217 ERROR 35412 --- [main] o.a.e.impl.interceptor.CommandContext    : Error while closing command context
+
+org.activiti.engine.ActivitiObjectNotFoundException: no processes deployed with key '请假流程定义'
+	at org.activiti.engine.impl.persistence.deploy.DeploymentManager.findDeployedLatestProcessDefinitionByKey(DeploymentManager.java:87) ~[activiti-engine-7.0.0.Beta1.jar:na]
+	at org.activiti.engine.impl.cmd.StartProcessInstanceCmd.execute(StartProcessInstanceCmd.java:85) ~[activiti-engine-7.0.0.Beta1.jar:na]
+	at org.activiti.engine.impl.cmd.StartProcessInstanceCmd.execute(StartProcessInstanceCmd.java:37) ~[activiti-engine-7.0.0.Beta1.jar:na]
+	at org.activiti.engine.impl.interceptor.CommandInvoker$1.run(CommandInvoker.java:37) ~[activiti-engine-7.0.0.Beta1.jar:na]
+	at org.activiti.engine.impl.interceptor.CommandInvoker.executeOperation(CommandInvoker.java:78) ~[activiti-engine-7.0.0.Beta1.jar:na]
+	at org.activiti.engine.impl.interceptor.CommandInvoker.executeOperations(CommandInvoker.java:57) ~[activiti-engine-7.0.0.Beta1.jar:na]
+	at org.activiti.engine.impl.interceptor.CommandInvoker.execute(CommandInvoker.java:42) ~[activiti-engine-7.0.0.Beta1.jar:na]
+	at org.activiti.engine.impl.interceptor.TransactionContextInterceptor.execute(TransactionContextInterceptor.java:48) ~[activiti-engine-7.0.0.Beta1.jar:na]
+	at org.activiti.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:63) ~[activiti-engine-7.0.0.Beta1.jar:na]
+	at org.activiti.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:29) [activiti-engine-7.0.0.Beta1.jar:na]
+	at org.activiti.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:44) [activiti-engine-7.0.0.Beta1.jar:na]
+	at org.activiti.engine.impl.cfg.CommandExecutorImpl.execute(CommandExecutorImpl.java:39) [activiti-engine-7.0.0.Beta1.jar:na]
+	at org.activiti.engine.impl.RuntimeServiceImpl.startProcessInstanceByKey(RuntimeServiceImpl.java:85) [activiti-engine-7.0.0.Beta1.jar:na]
+	at mao.activiti_process_deploy.ActivitiProcessDeployApplicationTests.testStartProcess(ActivitiProcessDeployApplicationTests.java:28) [test-classes/:na]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_332]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_332]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_332]
+	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_332]
+	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:725) [junit-platform-commons-1.8.2.jar:1.8.2]
+	at org.junit.jupiter.engine.execution.MethodInvocation.proceed(MethodInvocation.java:60) [junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$ValidatingInvocation.proceed(InvocationInterceptorChain.java:131) [junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.intercept(TimeoutExtension.java:149) [junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestableMethod(TimeoutExtension.java:140) [junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.extension.TimeoutExtension.interceptTestMethod(TimeoutExtension.java:84) [junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.execution.ExecutableInvoker$ReflectiveInterceptorCall.lambda$ofVoidMethod$0(ExecutableInvoker.java:115) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.lambda$invoke$0(ExecutableInvoker.java:105) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain$InterceptedInvocation.proceed(InvocationInterceptorChain.java:106) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.proceed(InvocationInterceptorChain.java:64) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.chainAndInvoke(InvocationInterceptorChain.java:45) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.execution.InvocationInterceptorChain.invoke(InvocationInterceptorChain.java:37) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:104) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.execution.ExecutableInvoker.invoke(ExecutableInvoker.java:98) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$invokeTestMethod$7(TestMethodTestDescriptor.java:214) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.invokeTestMethod(TestMethodTestDescriptor.java:210) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:135) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.execute(TestMethodTestDescriptor.java:66) ~[junit-jupiter-engine-5.8.2.jar:5.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at java.util.ArrayList.forEach(ArrayList.java:1259) ~[na:1.8.0_332]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at java.util.ArrayList.forEach(ArrayList.java:1259) ~[na:1.8.0_332]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.8.2.jar:1.8.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:107) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:88) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:54) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:67) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:52) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:114) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:86) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
+	at org.junit.platform.launcher.core.DefaultLauncherSession$DelegatingLauncher.execute(DefaultLauncherSession.java:86) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
+	at org.junit.platform.launcher.core.SessionPerRequestLauncher.execute(SessionPerRequestLauncher.java:53) ~[junit-platform-launcher-1.8.2.jar:1.8.2]
+	at com.intellij.junit5.JUnit5IdeaTestRunner.startRunnerWithArgs(JUnit5IdeaTestRunner.java:71) ~[junit5-rt.jar:na]
+	at com.intellij.rt.junit.IdeaTestRunner$Repeater.startRunnerWithArgs(IdeaTestRunner.java:33) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.prepareStreamsAndStart(JUnitStarter.java:235) ~[junit-rt.jar:na]
+	at com.intellij.rt.junit.JUnitStarter.main(JUnitStarter.java:54) ~[junit-rt.jar:na]
+
+2023-09-19 11:23:27.643  INFO 27400 --- [main] .a.ActivitiProcessDeployApplicationTests : Starting ActivitiProcessDeployApplicationTests using Java 1.8.0_332 on mao with PID 27400 (started by mao in D:\程序\2023Q3\activiti-process-deploy)
+2023-09-19 11:23:27.644 DEBUG 27400 --- [main] .a.ActivitiProcessDeployApplicationTests : Running with Spring Boot v2.7.1, Spring v5.3.21
+2023-09-19 11:23:27.644  INFO 27400 --- [main] .a.ActivitiProcessDeployApplicationTests : No active profile set, falling back to 1 default profile: "default"
+2023-09-19 11:23:27.967  INFO 27400 --- [main] .a.ActivitiProcessDeployApplicationTests : Started ActivitiProcessDeployApplicationTests in 0.524 seconds (JVM running for 1.073)
+2023-09-19 11:23:28.110  INFO 27400 --- [main] org.activiti.engine.ProcessEngines       : Initializing process engine using configuration 'file:/D:/%e7%a8%8b%e5%ba%8f/2023Q3/activiti-process-deploy/target/classes/activiti.cfg.xml'
+2023-09-19 11:23:28.110  INFO 27400 --- [main] org.activiti.engine.ProcessEngines       : initializing process engine for resource file:/D:/%e7%a8%8b%e5%ba%8f/2023Q3/activiti-process-deploy/target/classes/activiti.cfg.xml
+2023-09-19 11:23:29.474  INFO 27400 --- [main] aultActiviti5CompatibilityHandlerFactory : Activiti 5 compatibility handler implementation not found or error during instantiation : org.activiti.compatibility.DefaultActiviti5CompatibilityHandler. Activiti 5 backwards compatibility disabled.
+2023-09-19 11:23:29.515  INFO 27400 --- [main] o.a.engine.impl.ProcessEngineImpl        : ProcessEngine default created
+2023-09-19 11:23:29.521  INFO 27400 --- [main] org.activiti.engine.ProcessEngines       : initialised process engine default
+2023-09-19 11:23:29.648  INFO 27400 --- [main] .a.ActivitiProcessDeployApplicationTests : 流程定义id:test:1:2503
+2023-09-19 11:23:29.648  INFO 27400 --- [main] .a.ActivitiProcessDeployApplicationTests : 流程实例 id:5001
+2023-09-19 11:23:29.648  INFO 27400 --- [main] .a.ActivitiProcessDeployApplicationTests : 当前活动的id:null

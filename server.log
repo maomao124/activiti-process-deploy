@@ -1,0 +1,9 @@
+2023-09-21 14:52:00.354  INFO 42484 --- [main] .a.ActivitiProcessDeployApplicationTests : Starting ActivitiProcessDeployApplicationTests using Java 1.8.0_332 on mao with PID 42484 (started by mao in D:\程序\2023Q3\activiti-process-deploy)
+2023-09-21 14:52:00.359 DEBUG 42484 --- [main] .a.ActivitiProcessDeployApplicationTests : Running with Spring Boot v2.7.1, Spring v5.3.21
+2023-09-21 14:52:00.360  INFO 42484 --- [main] .a.ActivitiProcessDeployApplicationTests : No active profile set, falling back to 1 default profile: "default"
+2023-09-21 14:52:00.794  INFO 42484 --- [main] .a.ActivitiProcessDeployApplicationTests : Started ActivitiProcessDeployApplicationTests in 0.802 seconds (JVM running for 1.801)
+2023-09-21 14:52:00.947  INFO 42484 --- [main] org.activiti.engine.ProcessEngines       : Initializing process engine using configuration 'file:/D:/%e7%a8%8b%e5%ba%8f/2023Q3/activiti-process-deploy/target/classes/activiti.cfg.xml'
+2023-09-21 14:52:00.949  INFO 42484 --- [main] org.activiti.engine.ProcessEngines       : initializing process engine for resource file:/D:/%e7%a8%8b%e5%ba%8f/2023Q3/activiti-process-deploy/target/classes/activiti.cfg.xml
+2023-09-21 14:52:02.455  INFO 42484 --- [main] aultActiviti5CompatibilityHandlerFactory : Activiti 5 compatibility handler implementation not found or error during instantiation : org.activiti.compatibility.DefaultActiviti5CompatibilityHandler. Activiti 5 backwards compatibility disabled.
+2023-09-21 14:52:02.513  INFO 42484 --- [main] o.a.engine.impl.ProcessEngineImpl        : ProcessEngine default created
+2023-09-21 14:52:02.516  INFO 42484 --- [main] org.activiti.engine.ProcessEngines       : initialised process engine default
