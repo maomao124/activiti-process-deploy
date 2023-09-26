@@ -1,6 +1,7 @@
 package mao.activiti_process_deploy;
 
 import org.activiti.engine.*;
+import org.activiti.engine.history.HistoricActivityInstance;
 import org.activiti.engine.repository.ProcessDefinition;
 import org.activiti.engine.repository.ProcessDefinitionQuery;
 import org.activiti.engine.runtime.ProcessInstance;
@@ -9,7 +10,12 @@ import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.util.FileCopyUtils;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -126,7 +132,52 @@ class ActivitiProcessDeployApplicationTests
         ProcessEngine processEngine = ProcessEngines.getDefaultProcessEngine();
         RepositoryService repositoryService = processEngine.getRepositoryService();
         //设置true 级联删除流程定义，即使该流程有流程实例启动也可以删除，设置为false非级别删除方式
-        repositoryService.deleteDeployment("2503",false);
+        repositoryService.deleteDeployment("2503", false);
+    }
+
+    /**
+     * 下载文件
+     *
+     * @throws IOException 异常
+     */
+    @Test
+    void queryBpmnFile() throws IOException
+    {
+        ProcessEngine processEngine = ProcessEngines.getDefaultProcessEngine();
+        RepositoryService repositoryService = processEngine.getRepositoryService();
+        ProcessDefinition processDefinition = repositoryService.createProcessDefinitionQuery()
+                .processDefinitionKey("test")
+                .singleResult();
+        //得到部署ID
+        String deploymentId = processDefinition.getDeploymentId();
+        InputStream inputStream = repositoryService.getResourceAsStream(deploymentId, processDefinition.getResourceName());
+        File file = new File("./t.bpmn");
+        FileOutputStream fileOutputStream = new FileOutputStream(file);
+        FileCopyUtils.copy(inputStream, fileOutputStream);
+        fileOutputStream.close();
+        inputStream.close();
+    }
+
+    /**
+     * 查看历史
+     */
+    @Test
+    void findHistoryInfo()
+    {
+        ProcessEngine processEngine = ProcessEngines.getDefaultProcessEngine();
+        HistoryService historyService = processEngine.getHistoryService();
+        List<HistoricActivityInstance> instanceList = historyService.createHistoricActivityInstanceQuery()
+                .processInstanceId("2503")
+                .orderByHistoricActivityInstanceStartTime()
+                .asc()
+                .list();
+        for (HistoricActivityInstance historicActivityInstance : instanceList)
+        {
+            log.info(historicActivityInstance.getActivityId());
+            log.info(historicActivityInstance.getActivityName());
+            log.info(historicActivityInstance.getProcessDefinitionId());
+            log.info(historicActivityInstance.getProcessInstanceId());
+        }
     }
 
 }
